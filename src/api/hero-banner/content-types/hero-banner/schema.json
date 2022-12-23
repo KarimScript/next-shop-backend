@@ -1,0 +1,44 @@
+{
+  "kind": "singleType",
+  "collectionName": "hero_banners",
+  "info": {
+    "singularName": "hero-banner",
+    "pluralName": "hero-banners",
+    "displayName": "Banner",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "miniText": {
+      "type": "string"
+    },
+    "bigText": {
+      "type": "string"
+    },
+    "saleTime": {
+      "type": "date"
+    },
+    "btnText": {
+      "type": "string"
+    },
+    "discount": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product"
+    }
+  }
+}
